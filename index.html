@@ -6,6 +6,10 @@
 <title>Finance Wizard</title>
 <link rel="stylesheet" href="style.css">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- PWA Manifest -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1e90ff">
 </head>
 <body>
   <div class="container">
@@ -50,6 +54,14 @@
   </div>
 
 <script src="script.js"></script>
+
+<!-- Registrar Service Worker -->
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js')
+    .then(() => console.log('Service Worker registrado'))
+    .catch(err => console.log('Erro no Service Worker', err));
+}
+</script>
 </body>
 </html>
-
