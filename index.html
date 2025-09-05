@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finance Wizard</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>💰 Finance Wizard</h1>
+
+    <div class="balance">
+      <h2>Saldo: <span id="total">R$ 0,00</span></h2>
+    </div>
+
+    <div class="form-container">
+      <input type="text" id="desc" placeholder="Descrição">
+      <input type="number" id="amount" placeholder="Valor">
+      <select id="type">
+        <option value="income">Receita</option>
+        <option value="expense">Despesa</option>
+      </select>
+      <select id="category">
+        <option value="salario">Salário</option>
+        <option value="alimentacao">Alimentação</option>
+        <option value="transporte">Transporte</option>
+        <option value="lazer">Lazer</option>
+        <option value="outros">Outros</option>
+      </select>
+      <button id="addBtn">Adicionar</button>
+    </div>
+
+    <div class="transactions">
+      <h3>Movimentações</h3>
+      <ul id="transaction-list"></ul>
+    </div>
+
+    <div class="chart-container">
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <div class="progress-container">
+      <h3>Meta de Economia</h3>
+      <div class="progress-bar">
+        <div id="progress"></div>
+      </div>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
